@@ -563,12 +563,6 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
   margin-bottom: 0;
 }
 
-.kml-services-sub {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-}
-
 .kml-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -624,6 +618,25 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
   padding-top: 14px;
   border-top: 1px solid var(--divider);
   line-height: 1.7;
+}
+
+.kml-service-instagram-note {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--tag-text);
+  margin: 14px 0 0;
+  line-height: 1.7;
+}
+
+.kml-service-instagram-note a {
+  color: var(--accent-main);
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+.kml-service-instagram-note a:hover {
+  opacity: 0.75;
 }
 
 .kml-service-badge {
@@ -1326,8 +1339,6 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
         <h2 class="kml-h2" lang="ru">Услуги и цены</h2>
         <h2 class="kml-h2" lang="uk">Послуги та ціни</h2>
       </div>
-      <p class="kml-services-sub" lang="ru">Каждая консультация включает запись (видео или аудио) и 2 недели поддержки после сессии.</p>
-      <p class="kml-services-sub" lang="uk">Кожна консультація включає запис (відео або аудіо) та 2 тижні підтримки після сесії.</p>
     </div>
 
     <div class="kml-cards-grid kml-cards-grid--collapsed" id="servicesGrid">
@@ -1336,8 +1347,8 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
         <h3 class="kml-h3" lang="uk">Розбір особистої Матриці Долі</h3>
         <p class="kml-service-meta" lang="ru">1–2 запроса в одной сфере · Длительность: до 2 часов</p>
         <p class="kml-service-meta" lang="uk">1–2 запити в одній сфері · Тривалість: до 2 годин</p>
-        <p class="kml-p" lang="ru">Вы поймёте свой потенциал и кармические задачи. Консультация отвечает на вопросы: почему блокируется финансовый поток, как улучшить отношения с партнёром, что мешает найти любимого человека, каково ваше предназначение, что нужно проработать для успеха.</p>
-        <p class="kml-p" lang="uk">Ви зрозумієте свій потенціал і кармічні задачі. Консультація відповідає на питання: чому блокується фінансовий потік, як покращити стосунки з партнером, що заважає знайти кохану людину, яке ваше призначення, що потрібно опрацювати для успіху.</p>
+        <p class="kml-p" lang="ru">Вы поймёте свой потенциал, заложенный в вас с рождения, и ваши жизненные экзамены. Это «шпаргалка» для вашего успеха, денег и отношений.</p>
+        <p class="kml-p" lang="uk">Ви зрозумієте свій потенціал, що заложений в вас з народження і ваші екзамени на життя. Це «шпаргалка» для вашого успіху, грошей і стосунків.</p>
         <p class="kml-service-price">100€</p>
         <p class="kml-service-includes" lang="ru">Включает: анализ + медитация + видео и аудиозапись + 2 недели поддержки.</p>
         <p class="kml-service-includes" lang="uk">Включає: аналіз + медитація + відео та аудіозапис + 2 тижні підтримки.</p>
@@ -1346,8 +1357,8 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
       <div class="kml-service-card fade-in">
         <h3 class="kml-h3" lang="ru">Матрица совместимости</h3>
         <h3 class="kml-h3" lang="uk">Матриця сумісності</h3>
-        <p class="kml-p" lang="ru">Поможет найти причины, мешающие строить здоровые отношения — с партнёром, детьми, родителями или бизнес-партнёром.</p>
-        <p class="kml-p" lang="uk">Допоможе знайти причини, що заважають будувати здорові стосунки — з партнером, дітьми, батьками чи бізнес-партнером.</p>
+        <p class="kml-p" lang="ru">Поможет найти и устранить причины, мешающие строить здоровые отношения — с партнёром, детьми, родителями или бизнес-партнёром.</p>
+        <p class="kml-p" lang="uk">Допоможе знайти і усунути причини, що заважають будувати здорові стосунки — з партнером, дітьми, батьками чи бізнес-партнером.</p>
         <p class="kml-service-price">100€</p>
         <p class="kml-service-includes" lang="ru">Включает: анализ 3 матриц + медитация + видео и аудиозапись + 2 недели поддержки.</p>
         <p class="kml-service-includes" lang="uk">Включає: аналіз 3 матриць + медитація + відео та аудіозапис + 2 тижні підтримки.</p>
@@ -1356,8 +1367,8 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
       <div class="kml-service-card fade-in">
         <h3 class="kml-h3" lang="ru">Детская матрица</h3>
         <h3 class="kml-h3" lang="uk">Дитяча матриця</h3>
-        <p class="kml-p" lang="ru">Поможет понять потенциал ребёнка и найти к нему правильный подход. Результат: взаимопонимание.</p>
-        <p class="kml-p" lang="uk">Допоможе зрозуміти потенціал дитини та знайти до неї правильний підхід. Результат: взаєморозуміння.</p>
+        <p class="kml-p" lang="ru">Поможет увидеть и раскрыть потенциал вашего ребёнка и найти к нему правильный подход, чтобы не заблокировать его удачу в жизни. Результат: взаимопонимание и благодарность ребёнка.</p>
+        <p class="kml-p" lang="uk">Допоможе побачити і розкрити потенціал вашої дитини та знайти до неї правильний підхід, щоб не заблокувати ЇЇ удачу в житті. Результат: взаєморозуміння і вдячність дитини.</p>
         <p class="kml-service-price">50€</p>
         <p class="kml-service-includes" lang="ru">Включает: анализ + медитация + видео и аудиозапись.</p>
         <p class="kml-service-includes" lang="uk">Включає: аналіз + медитація + відео та аудіозапис.</p>
@@ -1368,8 +1379,8 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
         <h3 class="kml-h3" lang="uk">Особистий прогноз</h3>
         <p class="kml-service-meta" lang="ru">На год / месяц / точную дату</p>
         <p class="kml-service-meta" lang="uk">На рік / місяць / точну дату</p>
-        <p class="kml-p" lang="ru">Вы узнаете, какие энергии вас сопровождают, какие трудности могут возникнуть и что сделать для их разрешения.</p>
-        <p class="kml-p" lang="uk">Ви дізнаєтесь, які енергії вас супроводжують, які труднощі можуть виникнути та що зробити для їх вирішення.</p>
+        <p class="kml-p" lang="ru">Вы узнаете, какие проверки от Вселенной могут быть, и получите подсказки, что сделать, чтобы надолго не заблокировать ту или иную сферу жизни.</p>
+        <p class="kml-p" lang="uk">Ви дізнаєтесь, які перевірки від Всесвіту можуть бути, та підказки, що зробити щоб не заблокувати ту чи іншу сферу життя на довго.</p>
         <p class="kml-service-price">30€</p>
         <p class="kml-service-includes" lang="ru">Включает: аудиозапись + краткий файл.</p>
         <p class="kml-service-includes" lang="uk">Включає: аудіозапис + короткий файл.</p>
@@ -1378,17 +1389,22 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
       <div class="kml-service-card fade-in">
         <h3 class="kml-h3" lang="ru">Сеанс регрессии</h3>
         <h3 class="kml-h3" lang="uk">Сеанс регресії</h3>
-        <p class="kml-p" lang="ru">Индивидуальный формат. Напишите мне — обсудим детали.</p>
-        <p class="kml-p" lang="uk">Індивідуальний формат. Напишіть мені — обговоримо деталі.</p>
+        <p class="kml-p" lang="ru">Регрессия — это погружение в прошлую жизнь к первоисточнику проблемы с конкретным запросом, с целью пересмотра негативного опыта и освобождения от него.</p>
+        <p class="kml-p" lang="uk">Регресія — це занурення у минуле життя до першоджерела проблеми з конкретним запитом і з метою перегляду негативного досвіду та звільнення від нього.</p>
         <p class="kml-service-price" lang="ru">Цена уточняется</p>
         <p class="kml-service-price" lang="uk">Ціна уточнюється</p>
+        <div class="kml-service-btn-wrap">
+          <a class="kml-service-btn" href="https://sldaskdaksdfn.tilda.ws/page151344243.html" target="_blank" rel="noopener">
+            <span lang="ru">Подробнее</span><span lang="uk">Детальніше</span>
+          </a>
+        </div>
       </div>
 
       <div class="kml-service-card fade-in">
         <h3 class="kml-h3" lang="ru">4 Шага к вашей цели</h3>
         <h3 class="kml-h3" lang="uk">4 Кроки до вашої мети</h3>
-        <p class="kml-p" lang="ru">Помогу правильно сформулировать цель (это влияет на результат), понять — ваша ли она, и получить конкретный план действий. Проведу практику очищения от негативных ментальных отпечатков, которая мешает достижению цели.</p>
-        <p class="kml-p" lang="uk">Допоможу правильно сформулювати мету (це впливає на результат), зрозуміти — чи ваша вона, та отримати конкретний план дій. Проведу практику очищення від негативних ментальних відбитків, яка заважає досягненню мети.</p>
+        <p class="kml-p" lang="ru">Это древний метод достижения цели в течение 6–18 месяцев. Дам план простых действий именно под вашу цель, который работает у всех, кто его выполняет.</p>
+        <p class="kml-p" lang="uk">Це стародавній метод досягнення мети на протязі 6–18 місяців. Надам план простих дій саме під вашу мету, який працює у всіх, хто його виконує.</p>
         <p class="kml-service-price">50€</p>
         <p class="kml-service-includes" lang="ru">Включает: 2 недели поддержки.</p>
         <p class="kml-service-includes" lang="uk">Включає: 2 тижні підтримки.</p>
@@ -1397,18 +1413,24 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
       <div class="kml-service-card fade-in">
         <h3 class="kml-h3" lang="ru">Консультация по подбору камней</h3>
         <h3 class="kml-h3" lang="uk">Консультація з підбору каміння</h3>
-        <p class="kml-p" lang="ru">Индивидуальный формат. Напишите мне — обсудим детали.</p>
-        <p class="kml-p" lang="uk">Індивідуальний формат. Напишіть мені — обговоримо деталі.</p>
+        <p class="kml-p" lang="ru">Подбор минералов по вашей натальной карте и изготовление украшений (браслет, талисман и т.д.) Такое украшение создаётся под ваш запрос для активации той или иной сферы жизни.</p>
+        <p class="kml-p" lang="uk">Підбір мінералів по вашій натальній карті та виготовлення прикрас (браслет, талісман і т.д.) Така прикраса створюється на ваш запит для активації тієї чи іншої сфери життя.</p>
         <p class="kml-service-price" lang="ru">Цена уточняется</p>
         <p class="kml-service-price" lang="uk">Ціна уточнюється</p>
+        <!-- TODO: вставить реальную ссылку на Instagram -->
+        <p class="kml-service-instagram-note" lang="ru">Больше про украшения на странице <a href="#" target="_blank" rel="noopener">Instagram</a></p>
+        <!-- TODO: вставить реальную ссылку на Instagram -->
+        <p class="kml-service-instagram-note" lang="uk">Більше про прикраси на сторінці <a href="#" target="_blank" rel="noopener">Instagram</a></p>
       </div>
 
       <div class="kml-service-card fade-in">
         <h3 class="kml-h3" lang="ru">Практикум «Исцели свою родовую энергию»</h3>
         <h3 class="kml-h3" lang="uk">Практикум «Зціли свою родову енергію»</h3>
-        <p class="kml-p" lang="ru">Родовая энергия всегда нам помогает, если мы сами её не блокируем. Именно от этого зависит наш успех во всех сферах жизни. Отношения с родителями — причина всего. Почему мы родились именно у таких родителей? Как выровнять родовую энергию? Как запустить успех в своей жизни? Ответы на все эти вопросы вы получите на практикуме.</p>
-        <p class="kml-p" lang="uk">Родова енергія нам завжди допомагає, якщо ми самі її не блокуємо. І саме від цього залежить наш успіх у всіх сферах життя. Стосунки з батьками — це причина всього. Чому ми народилися саме у таких батьків? Як вирівняти родову енергію? Як запустити успіх у своєму житті? Відповіді на усі ці питання ви отримаєте на практикумі.</p>
+        <p class="kml-p" lang="ru">Родовая энергия влияет на наш успех во всех сферах жизни. Почему мы родились именно в этой семье? Как восстановить силу рода и открыть путь к успеху? Ответы — на практикуме.</p>
+        <p class="kml-p" lang="uk">Родова енергія впливає на наш успіх у всіх сферах життя. Чому ми народилися саме в цій родині? Як відновити силу роду та відкрити шлях до успіху? Відповіді — на практикумі.</p>
         <p class="kml-service-price">20€</p>
+        <p class="kml-service-includes" lang="ru">Запись</p>
+        <p class="kml-service-includes" lang="uk">Запис</p>
         <div class="kml-service-btn-wrap">
           <a class="kml-service-btn" href="https://secure.wayforpay.com/button/bd1f9f0681858" target="_blank" rel="noopener">
             <span lang="ru">Купить</span><span lang="uk">Купити</span>
@@ -1419,8 +1441,8 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
       <div class="kml-service-card fade-in">
         <h3 class="kml-h3" lang="ru">Медитация «Встреча с душой»</h3>
         <h3 class="kml-h3" lang="uk">Медитація «Зустріч із душею»</h3>
-        <p class="kml-p" lang="ru">Эта медитация поможет услышать себя, а не те программы, которые мы постоянно слышим в голове и которые нами управляют.</p>
-        <p class="kml-p" lang="uk">Ця медитація допоможе почути себе, а не ті програми, які ми постійно чуємо в голові й які нами керують.</p>
+        <p class="kml-p" lang="ru">Эта медитация поможет услышать себя, а не те программы, которые мы постоянно слышим в голове и которые нами управляют. (Особенно для нерешительных)</p>
+        <p class="kml-p" lang="uk">Ця медитація допоможе почути себе, а не ті програми, які ми постійно чуємо в голові і які нами керують. (Особливо для нерішучих)</p>
         <span class="kml-service-badge" lang="ru">Акция</span>
         <span class="kml-service-badge" lang="uk">Акція</span>
         <div class="kml-price-row">
@@ -1437,7 +1459,7 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
 
     <div class="kml-services-more">
       <button type="button" class="kml-btn-secondary" id="servicesToggle" data-services-toggle aria-expanded="false" aria-controls="servicesGrid">
-        <span lang="ru">Подробнее</span><span lang="uk">Детальніше</span>
+        <span lang="ru">Все услуги</span><span lang="uk">Усі послуги</span>
       </button>
     </div>
   </div>
@@ -1820,8 +1842,8 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
     servicesToggle.addEventListener('click', function () {
       var collapsed = servicesGrid.classList.toggle('kml-cards-grid--collapsed');
       servicesToggle.setAttribute('aria-expanded', String(!collapsed));
-      if (labelRu) labelRu.textContent = collapsed ? 'Подробнее' : 'Свернуть';
-      if (labelUk) labelUk.textContent = collapsed ? 'Детальніше' : 'Згорнути';
+      if (labelRu) labelRu.textContent = collapsed ? 'Все услуги' : 'Свернуть';
+      if (labelUk) labelUk.textContent = collapsed ? 'Усі послуги' : 'Згорнути';
       if (collapsed) {
         var section = document.getElementById('services');
         if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
