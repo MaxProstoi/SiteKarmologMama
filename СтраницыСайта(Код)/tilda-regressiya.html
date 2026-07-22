@@ -550,10 +550,64 @@ html { scroll-behavior: smooth; }
   color: #FFFFFF;
 }
 
+.kml-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.kml-h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 1.2;
+  color: var(--accent-mid);
+  margin: 0 0 20px;
+}
+
+.kml-p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--text-muted);
+  margin: 0 0 18px;
+}
+
+.kml-contact-row {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.kml-contact-left {
+  width: 45%;
+}
+
+.kml-contact-left img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: center 80%;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 28px;
+}
+
+.kml-contact-fine {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.kml-contact-right {
+  width: 50%;
+}
+
 .kml-form-field {
-  margin: 0 auto 28px;
-  max-width: 360px;
-  text-align: left;
+  margin-bottom: 28px;
 }
 
 .kml-form-field label {
@@ -565,7 +619,8 @@ html { scroll-behavior: smooth; }
   margin-bottom: 8px;
 }
 
-.kml-form-field input {
+.kml-form-field input,
+.kml-form-field textarea {
   width: 100%;
   border: none;
   border-bottom: 1px solid var(--divider);
@@ -575,9 +630,11 @@ html { scroll-behavior: smooth; }
   font-size: 15px;
   color: var(--accent-dark);
   padding: 10px 0;
+  resize: none;
 }
 
-.kml-form-field input:focus {
+.kml-form-field input:focus,
+.kml-form-field textarea:focus {
   outline: none;
   border-bottom-color: var(--accent-main);
 }
@@ -595,7 +652,7 @@ html { scroll-behavior: smooth; }
   background: var(--accent-main);
   color: var(--text-on-cta);
   border: 1px solid var(--accent-main);
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
 
 .kml-btn-main:hover {
@@ -613,7 +670,6 @@ html { scroll-behavior: smooth; }
   font-weight: 400;
   font-size: 24px;
   color: var(--accent-mid);
-  margin-top: 20px;
 }
 
 #formError {
@@ -621,6 +677,23 @@ html { scroll-behavior: smooth; }
   margin-top: 12px;
   font-size: 15px;
   color: #B3261E;
+}
+
+@media (max-width: 768px) {
+  .kml-contact-row {
+    flex-direction: column;
+  }
+  .kml-contact-left,
+  .kml-contact-right {
+    width: 100%;
+  }
+  .kml-contact-left img {
+    height: 320px;
+    object-position: center 74%;
+  }
+  .kml-contact-right {
+    margin-top: 16px;
+  }
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -925,21 +998,28 @@ html { scroll-behavior: smooth; }
 
 <!-- ======================= BLOCK 8 — CONTACT ======================= -->
 <section id="regress-contact">
-  <div class="rg-container">
-    <div class="rg-contact-inner fade-in">
-      <h2 class="rg-h2" lang="ru">Записаться на сеанс</h2>
-      <h2 class="rg-h2" lang="uk">Записатися на сеанс</h2>
-      <p class="rg-contact-sub" lang="ru">Напишите удобным способом — отвечаю лично.</p>
-      <p class="rg-contact-sub" lang="uk">Напишіть зручним способом — відповідаю особисто.</p>
-      <form id="contactForm">
-        <div class="kml-form-field">
-          <label for="kmlContact"><span lang="ru">Telegram или Instagram</span><span lang="uk">Telegram або Instagram</span></label>
-          <input type="text" id="kmlContact" name="contact" required>
-        </div>
-        <button type="submit" class="kml-btn-main" id="kmlFormSubmit"><span lang="ru">Отправить</span><span lang="uk">Надіслати</span></button>
-        <p id="formError"><span lang="ru">Не удалось отправить. Попробуйте ещё раз или напишите в Telegram.</span><span lang="uk">Не вдалося надіслати. Спробуйте ще раз або напишіть у Telegram.</span></p>
-      </form>
-      <p id="formThanks"><span lang="ru">«Спасибо. Я напишу вам в ближайшее время.»</span><span lang="uk">«Дякую. Я напишу вам найближчим часом.»</span></p>
+  <div class="kml-container">
+    <div class="kml-contact-row">
+      <div class="kml-contact-left fade-in">
+        <img src="https://optim.tildacdn.net/tild3537-6236-4663-b130-303938383264/-/format/webp/6.jpg.webp" alt="Запись на консультацию">
+        <h2 class="kml-h2" lang="ru">Записаться на консультацию</h2>
+        <h2 class="kml-h2" lang="uk">Записатися на консультацію</h2>
+        <p class="kml-p" lang="ru">Оставьте контакт. Консультации проходят онлайн, на русском и украинском языках.</p>
+        <p class="kml-p" lang="uk">Залиште контакт. Консультації проходять онлайн, російською та українською мовами.</p>
+        <p class="kml-contact-fine" lang="ru">Конфиденциальность гарантирована. Данные не передаются третьим лицам.</p>
+        <p class="kml-contact-fine" lang="uk">Конфіденційність гарантована. Дані не передаються третім особам.</p>
+      </div>
+      <div class="kml-contact-right fade-in">
+        <form id="contactForm">
+          <div class="kml-form-field">
+            <label for="kmlContact"><span lang="ru">Telegram или Instagram</span><span lang="uk">Telegram або Instagram</span></label>
+            <input type="text" id="kmlContact" name="contact" required>
+          </div>
+          <button type="submit" class="kml-btn-main" id="kmlFormSubmit"><span lang="ru">Отправить</span><span lang="uk">Надіслати</span></button>
+          <p id="formError"><span lang="ru">Не удалось отправить. Попробуйте ещё раз или напишите в Telegram.</span><span lang="uk">Не вдалося надіслати. Спробуйте ще раз або напишіть у Telegram.</span></p>
+        </form>
+        <p id="formThanks"><span lang="ru">«Спасибо. Я напишу вам в ближайшее время.»</span><span lang="uk">«Дякую. Я напишу вам найближчим часом.»</span></p>
+      </div>
     </div>
   </div>
 </section>
