@@ -957,17 +957,6 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
   margin: 0;
 }
 
-.kml-contact-instagram {
-  display: inline-flex;
-  margin-top: 24px;
-  color: var(--accent-main);
-  transition: opacity 0.3s ease;
-}
-
-.kml-contact-instagram:hover {
-  opacity: 0.7;
-}
-
 .kml-contact-right {
   width: 50%;
 }
@@ -1051,8 +1040,15 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
 }
 
 .kml-footer-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: var(--text-muted);
   text-decoration: none;
+}
+
+.kml-footer-social a svg {
+  display: block;
 }
 
 .kml-footer-social a:hover {
@@ -1657,14 +1653,6 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
           <p id="formError"><span lang="ru">Не удалось отправить. Попробуйте ещё раз или напишите в Telegram.</span><span lang="uk">Не вдалося надіслати. Спробуйте ще раз або напишіть у Telegram.</span></p>
         </form>
         <p id="formThanks"><span lang="ru">«Спасибо. Я напишу вам в ближайшее время.»</span><span lang="uk">«Дякую. Я напишу вам найближчим часом.»</span></p>
-        <a class="kml-contact-instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
-            <circle cx="12" cy="12" r="4.2"></circle>
-            <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle>
-          </svg>
-        </a>
-        <!-- TODO: вставить реальную ссылку на личный Instagram-профиль Наталии вместо href="#" -->
       </div>
     </div>
   </div>
@@ -1678,9 +1666,16 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
       <p style="margin:0;" lang="ru">© 2025 Кармолог</p>
       <p style="margin:0;" lang="uk">© 2025 Кармолог</p>
       <div class="kml-footer-social">
-        <a href="#" target="_blank" rel="noopener">Telegram</a>
-        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+            <circle cx="12" cy="12" r="4.2"></circle>
+            <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle>
+          </svg>
+          <span>Instagram</span>
+        </a>
       </div>
+      <!-- TODO: вставить реальную ссылку на личный Instagram-профиль Наталии вместо href="#" -->
     </div>
   </div>
 </section>
