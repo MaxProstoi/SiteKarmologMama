@@ -274,6 +274,31 @@ html { scroll-behavior: smooth; }
   line-height: 1.9;
 }
 
+.rg-requests-grid {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.rg-requests-text {
+  flex: 1 1 58%;
+  min-width: 0;
+}
+
+.rg-requests-photo {
+  flex: 0 0 38%;
+  max-width: 38%;
+}
+
+.rg-requests-photo img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  display: block;
+}
+
 /* ======================= BLOCK 1.5 — QUOTE PAUSE ======================= */
 
 #regress-quote {
@@ -763,6 +788,25 @@ html { scroll-behavior: smooth; }
     flex: 1 1 auto;
   }
 
+  .rg-requests-grid {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .rg-requests-text {
+    flex: 1 1 auto;
+  }
+
+  .rg-requests-photo {
+    flex: 1 1 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .rg-requests-photo img {
+    height: 70vw;
+  }
+
   #regress-how,
   #regress-requests,
   #regress-result,
@@ -817,6 +861,8 @@ html { scroll-behavior: smooth; }
       <a href="#regress-contact"><span lang="ru">Записаться</span><span lang="uk">Записатися</span></a>
       <span class="kml-nav-sep" aria-hidden="true">·</span>
       <a href="https://sldaskdaksdfn.tilda.ws#footer"><span lang="ru">Контакты</span><span lang="uk">Контакти</span></a>
+      <span class="kml-nav-sep" aria-hidden="true">·</span>
+      <a href="https://sldaskdaksdfn.tilda.ws/klasifikation"><span lang="ru">Квалификация</span><span lang="uk">Кваліфікація</span></a>
       <div class="lang-switch" role="group" aria-label="Язык сайта / Мова сайту">
         <button type="button" data-set-lang="ru" aria-label="Русский">RU</button>
         <span class="lang-sep" aria-hidden="true">|</span>
@@ -885,29 +931,34 @@ html { scroll-behavior: smooth; }
 <!-- ======================= BLOCK 3 — REQUESTS ======================= -->
 <section id="regress-requests">
   <div class="rg-container">
-    <div class="fade-in">
-      <h2 class="rg-h2" lang="ru">С какими запросами идут в регрессию?</h2>
-      <h2 class="rg-h2" lang="uk">З якими запитами йдуть у регресію?</h2>
-      <ul class="rg-list" lang="ru">
-        <li>вопросы, которые не решаются уже долгое время</li>
-        <li>болезни, при которых не помогает лечение</li>
-        <li>страхи, которым нет объяснения</li>
-        <li>невозможность создать семью</li>
-        <li>постоянные повторяющиеся сценарии или ситуации</li>
-        <li>сложные длительные отношения с близкими</li>
-      </ul>
-      <ul class="rg-list" lang="uk">
-        <li>питання, що не вирішуються вже довгий час</li>
-        <li>хвороби, при яких не допомагає лікування</li>
-        <li>страхи, яким немає пояснення</li>
-        <li>неможливість створити сім'ю</li>
-        <li>постійні повторювані сценарії або ситуації</li>
-        <li>складні довготривалі стосунки з рідними</li>
-      </ul>
-      <p class="rg-note" lang="ru"><span class="rg-strong">Важно!</span> Просто «пойти посмотреть» или «погулять» запрещено, потому что это работа с подсознанием.</p>
-      <p class="rg-note" lang="uk"><span class="rg-strong">Важливо!</span> Просто «піти подивитися» або «погуляти» заборонено, бо це робота з підсвідомістю.</p>
-      <p class="rg-body" lang="ru">Если у вас есть хотя бы одно из перечисленного, приглашаю вас на сеанс регрессии, где мы очень бережно найдём в вашем подсознании и исцелим вашу нынешнюю боль или проблему.</p>
-      <p class="rg-body" lang="uk">Якщо у вас хоча б одне з перерахованого, запрошую вас на сеанс регресії, де ми дуже лагідно знайдемо у вашій підсвідомості та зцілимо вашу теперішню біль або проблему.</p>
+    <div class="rg-requests-grid">
+      <div class="rg-requests-text fade-in">
+        <h2 class="rg-h2" lang="ru">С какими запросами идут в регрессию?</h2>
+        <h2 class="rg-h2" lang="uk">З якими запитами йдуть у регресію?</h2>
+        <ul class="rg-list" lang="ru">
+          <li>вопросы, которые не решаются уже долгое время</li>
+          <li>болезни, при которых не помогает лечение</li>
+          <li>страхи, которым нет объяснения</li>
+          <li>невозможность создать семью</li>
+          <li>постоянные повторяющиеся сценарии или ситуации</li>
+          <li>сложные длительные отношения с близкими</li>
+        </ul>
+        <ul class="rg-list" lang="uk">
+          <li>питання, що не вирішуються вже довгий час</li>
+          <li>хвороби, при яких не допомагає лікування</li>
+          <li>страхи, яким немає пояснення</li>
+          <li>неможливість створити сім'ю</li>
+          <li>постійні повторювані сценарії або ситуації</li>
+          <li>складні довготривалі стосунки з рідними</li>
+        </ul>
+        <p class="rg-note" lang="ru"><span class="rg-strong">Важно!</span> Просто «пойти посмотреть» или «погулять» запрещено, потому что это работа с подсознанием.</p>
+        <p class="rg-note" lang="uk"><span class="rg-strong">Важливо!</span> Просто «піти подивитися» або «погуляти» заборонено, бо це робота з підсвідомістю.</p>
+        <p class="rg-body" lang="ru">Если у вас есть хотя бы одно из перечисленного, приглашаю вас на сеанс регрессии, где мы очень бережно найдём в вашем подсознании и исцелим вашу нынешнюю боль или проблему.</p>
+        <p class="rg-body" lang="uk">Якщо у вас хоча б одне з перерахованого, запрошую вас на сеанс регресії, де ми дуже лагідно знайдемо у вашій підсвідомості та зцілимо вашу теперішню біль або проблему.</p>
+      </div>
+      <div class="rg-requests-photo fade-in">
+        <img src="https://optim.tildacdn.net/tild3964-6430-4338-b733-346431613164/-/format/webp/IMG_4826.jpeg.webp" alt="Регрессия — с какими запросами приходят">
+      </div>
     </div>
   </div>
 </section>
