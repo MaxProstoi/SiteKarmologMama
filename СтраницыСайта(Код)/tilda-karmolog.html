@@ -690,6 +690,11 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
   flex-shrink: 0;
 }
 
+/* Зазор цена → кнопка только там, где нет .kml-service-includes между ними (карточка «Сеанс регрессии») */
+.kml-service-price + .kml-service-btn-wrap {
+  margin-top: 12px;
+}
+
 .kml-service-btn {
   display: inline-block;
   font-family: 'Inter', sans-serif;
