@@ -835,6 +835,13 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
   flex-shrink: 0;
 }
 
+.kml-review-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .kml-review-name {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -868,6 +875,11 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
 }
 
 /* ---------- REVIEWS VIDEO ---------- */
+
+#reviews-video,
+#reviews-video + .kml-divider {
+  display: none;
+}
 
 #reviews-video {
   background: var(--bg-section);
@@ -1533,72 +1545,45 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
     <div class="kml-carousel-track" id="reviewsTextTrack">
       <div class="kml-review-card fade-in">
         <div class="kml-review-top">
-          <div class="kml-review-avatar">МК</div>
+          <div class="kml-review-avatar">ТД</div>
           <div>
-            <p class="kml-review-name">Марина К.</p>
-            <p class="kml-review-service" lang="ru">Разбор личной Матрицы Судьбы</p>
-            <p class="kml-review-service" lang="uk">Розбір особистої Матриці Долі</p>
+            <p class="kml-review-name">Татьяна Доброноженко</p>
+            <p class="kml-review-service" lang="ru">Консультация</p>
+            <p class="kml-review-service" lang="uk">Консультація</p>
           </div>
         </div>
         <p class="kml-review-stars">✦✦✦✦✦</p>
-        <p class="kml-review-text" lang="ru">«Я пришла с вопросом о карьере — почему всё стопорится, несмотря на усилия. После консультации увидела паттерн, который тянется из детства. Прошло три месяца — ситуация изменилась. Не магически, а через конкретные действия, которые стали понятны после сессии.»</p>
-        <p class="kml-review-text" lang="uk">«Я прийшла з питанням про кар'єру — чому все гальмується, попри зусилля. Після консультації побачила патерн, який тягнеться з дитинства. Минуло три місяці — ситуація змінилася. Не магічно, а через конкретні дії, які стали зрозумілі після сесії.»</p>
+        <p class="kml-review-text" lang="ru">«Наталья, огромное спасибо за консультацию! Долго шла к этому — то времени не было, то боялась услышать что-то не то. Но всё получилось: ценные советы, объяснения, почему так происходит, и чёткое направление к цели. Спасибо за чувство уверенности, теперь знаю, что всё зависит от моих мыслей, поступков и настроя на будущее. У меня действенный учитель-наставник!»</p>
+        <p class="kml-review-text" lang="uk">«Наталі, дуже дякую за консультацію! Довго йшла до цього, то часу не було, то боялась почути щось не те. Але все вийшло: цінні поради, пояснення, чому так відбувається, і чіткий напрямок до мети. Дякую за відчуття впевненості, тепер знаю, що все залежить від моїх думок, вчинків і налаштувань на майбутнє. У мене дієвий вчитель-наставник!»</p>
+      </div>
+      <!-- TODO: у Татьяны Доброноженко пока нет фото — как только появится, заменить <div class="kml-review-avatar">ТД</div> на <div class="kml-review-avatar"><img src="..." alt="Татьяна Доброноженко"></div>, по образцу карточек 2 и 3 -->
+
+      <div class="kml-review-card fade-in">
+        <div class="kml-review-top">
+          <div class="kml-review-avatar"><img src="https://optim.tildacdn.net/tild3434-3562-4833-a663-623839313536/-/format/webp/photo_2026-08-03_211.jpeg.webp" alt="Оксана Попова"></div>
+          <div>
+            <p class="kml-review-name">Оксана Попова</p>
+            <p class="kml-review-service" lang="ru">Регрессия</p>
+            <p class="kml-review-service" lang="uk">Регресія</p>
+          </div>
+        </div>
+        <p class="kml-review-stars">✦✦✦✦✦</p>
+        <p class="kml-review-text" lang="ru">«Наталочка, спасибо за бережное сопровождение в регрессии. Предупреждение о возможных ситуациях помогло не паниковать. Сразу после — очень интересные ощущения: будто реальность рядом, буквально в миллиметре, и одновременно облегчение от понимания, что всё можно изменить.»</p>
+        <p class="kml-review-text" lang="uk">«Наталочко, дякую за бережний супровід у регресії. Попередження про можливі ситуації допомогло не панікувати. Одразу після дуже цікаві відчуття: наче реальність поряд, буквально в міліметрі, і водночас полегшення від розуміння, що все можна змінити.»</p>
       </div>
 
       <div class="kml-review-card fade-in">
         <div class="kml-review-top">
-          <div class="kml-review-avatar">ТВ</div>
+          <div class="kml-review-avatar"><img src="https://optim.tildacdn.net/tild3266-6166-4366-b533-363933303563/-/format/webp/photo_2026-08-03_211.jpeg.webp" alt="Татьяна Стариченко"></div>
           <div>
-            <p class="kml-review-name">Татьяна В.</p>
-            <p class="kml-review-service" lang="ru">Матрица совместимости</p>
-            <p class="kml-review-service" lang="uk">Матриця сумісності</p>
+            <p class="kml-review-name">Татьяна Стариченко</p>
+            <p class="kml-review-service" lang="ru">Регрессия</p>
+            <p class="kml-review-service" lang="uk">Регресія</p>
           </div>
         </div>
         <p class="kml-review-stars">✦✦✦✦✦</p>
-        <p class="kml-review-text" lang="ru">«Делали с мужем — я скептически относилась к этому формату. Но анализ совместимости дал нам общий язык для разговора о вещах, о которых мы годами молчали. Теперь понимаем друг друга иначе.»</p>
-        <p class="kml-review-text" lang="uk">«Робили з чоловіком — я скептично ставилася до цього формату. Але аналіз сумісності дав нам спільну мову для розмови про речі, про які ми роками мовчали. Тепер розуміємо одне одного інакше.»</p>
-      </div>
-
-      <div class="kml-review-card fade-in">
-        <div class="kml-review-top">
-          <div class="kml-review-avatar">ОР</div>
-          <div>
-            <p class="kml-review-name">Ольга Р.</p>
-            <p class="kml-review-service" lang="ru">4 шага к вашей цели</p>
-            <p class="kml-review-service" lang="uk">4 кроки до вашої мети</p>
-          </div>
-        </div>
-        <p class="kml-review-stars">✦✦✦✦✦</p>
-        <p class="kml-review-text" lang="ru">«Очень ценю, что здесь нет мистики ради мистики. Всё объясняется логично, есть структура и конкретные шаги. Медитация в конце сессии была неожиданно глубокой — я почувствовала реальное облегчение.»</p>
-        <p class="kml-review-text" lang="uk">«Дуже ціную, що тут немає містики заради містики. Усе пояснюється логічно, є структура та конкретні кроки. Медитація наприкінці сесії була несподівано глибокою — я відчула справжнє полегшення.»</p>
-      </div>
-
-      <div class="kml-review-card fade-in">
-        <div class="kml-review-top">
-          <div class="kml-review-avatar">СМ</div>
-          <div>
-            <p class="kml-review-name">Светлана М.</p>
-            <p class="kml-review-service" lang="ru">Личный прогноз</p>
-            <p class="kml-review-service" lang="uk">Особистий прогноз</p>
-          </div>
-        </div>
-        <p class="kml-review-stars">✦✦✦✦✦</p>
-        <p class="kml-review-text" lang="ru">«Заказала прогноз на год с осторожностью — боялась услышать что-то пугающее. Получила спокойный, взвешенный анализ с акцентом на возможности. Запись удобно переслушивать. Буду делать каждый год.»</p>
-        <p class="kml-review-text" lang="uk">«Замовила прогноз на рік з обережністю — боялася почути щось лякаюче. Отримала спокійний, виважений аналіз з акцентом на можливості. Запис зручно переслуховувати. Робитиму щороку.»</p>
-      </div>
-
-      <div class="kml-review-card fade-in">
-        <div class="kml-review-top">
-          <div class="kml-review-avatar">АГ</div>
-          <div>
-            <p class="kml-review-name">Анна Г.</p>
-            <p class="kml-review-service" lang="ru">Детская матрица</p>
-            <p class="kml-review-service" lang="uk">Дитяча матриця</p>
-          </div>
-        </div>
-        <p class="kml-review-stars">✦✦✦✦✦</p>
-        <p class="kml-review-text" lang="ru">«Делала для дочери-подростка. Помогло понять, почему она реагирует именно так на определённые ситуации. Теперь меньше конфликтов — я просто стала иначе выстраивать разговор с ней.»</p>
-        <p class="kml-review-text" lang="uk">«Робила для доньки-підлітка. Допомогло зрозуміти, чому вона реагує саме так на певні ситуації. Тепер менше конфліктів — я просто почала інакше будувати розмову з нею.»</p>
+        <p class="kml-review-text" lang="ru">«Впервые попробовала регрессию, как новое блюдо, хотелось поскорее узнать вкус. Волновалась, переносилась в прошлое, и из подсознания сами появлялись картинки жизни, которые выстраивались в цепочку. Интересно было, каким будет финал, и вот оно — свет и мечты о будущем. Ещё долго прокручивала этот фильм в голове и поняла: не доживать нужно, а жить и менять. Спасибо, учительница, за ценный новый опыт! 🥰💖»</p>
+        <p class="kml-review-text" lang="uk">«Вперше спробувала регресію, як нова страва, хотілося скоріше пізнати смак. Хвилювалась, переносилась у минуле, і з підсвідомості самі з'являлися картинки життя, що вишиковувались у ланцюжок. Цікаво було, яким буде фінал, і ось воно, світло і мрії про майбутнє. Ще довго прокручувала цей фільм у голові й зрозуміла: не доживати треба, а жити й змінювати. Дякую, вчителько, за цінний новий досвід! 🥰💖»</p>
       </div>
     </div>
   </div>
