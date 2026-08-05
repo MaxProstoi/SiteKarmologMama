@@ -286,6 +286,15 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
   font-size: 13px;
 }
 
+.kml-nav-divider {
+  display: inline-block;
+  width: 1px;
+  height: 16px;
+  background: var(--divider);
+  margin: 0 14px;
+  flex-shrink: 0;
+}
+
 /* ---------- LANG SWITCH (в ряду навигации) ---------- */
 
 .lang-switch {
@@ -1262,10 +1271,11 @@ html:not([data-lang]) [lang="uk"] { display: none; } /* дефолт — ru */
       <a href="#contact"><span lang="ru">Записаться</span><span lang="uk">Записатися</span></a>
       <span class="kml-nav-sep" aria-hidden="true">·</span>
       <a href="#footer"><span lang="ru">Контакты</span><span lang="uk">Контакти</span></a>
-      <span class="kml-nav-sep" aria-hidden="true">·</span>
+      <span class="kml-nav-divider" aria-hidden="true"></span>
       <a href="https://sldaskdaksdfn.tilda.ws/klasifikation"><span lang="ru">Квалификация</span><span lang="uk">Кваліфікація</span></a>
       <span class="kml-nav-sep" aria-hidden="true">·</span>
       <a href="https://sldaskdaksdfn.tilda.ws/page151344243.html"><span lang="ru">Регрессия</span><span lang="uk">Регресія</span></a>
+      <span class="kml-nav-divider" aria-hidden="true"></span>
       <div class="lang-switch" role="group" aria-label="Язык сайта / Мова сайту">
         <button type="button" data-set-lang="ru" aria-label="Русский">RU</button>
         <span class="lang-sep" aria-hidden="true">|</span>
