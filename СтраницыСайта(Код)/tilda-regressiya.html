@@ -122,6 +122,16 @@ html { scroll-behavior: smooth; }
   font-size: 13px;
 }
 
+.kml-nav-divider {
+  display: inline-block;
+  width: 1.5px;
+  height: 20px;
+  background: var(--accent-main);
+  opacity: 0.45;
+  margin: 0 14px;
+  flex-shrink: 0;
+}
+
 /* ---------- LANG SWITCH (в ряду навигации) ---------- */
 
 .lang-switch {
@@ -865,8 +875,9 @@ html { scroll-behavior: smooth; }
       <a href="#regress-contact"><span lang="ru">Записаться</span><span lang="uk">Записатися</span></a>
       <span class="kml-nav-sep" aria-hidden="true">·</span>
       <a href="https://sldaskdaksdfn.tilda.ws#footer"><span lang="ru">Контакты</span><span lang="uk">Контакти</span></a>
-      <span class="kml-nav-sep" aria-hidden="true">·</span>
+      <span class="kml-nav-divider" aria-hidden="true"></span>
       <a href="https://sldaskdaksdfn.tilda.ws/klasifikation"><span lang="ru">Квалификация</span><span lang="uk">Кваліфікація</span></a>
+      <span class="kml-nav-divider" aria-hidden="true"></span>
       <div class="lang-switch" role="group" aria-label="Язык сайта / Мова сайту">
         <button type="button" data-set-lang="ru" aria-label="Русский">RU</button>
         <span class="lang-sep" aria-hidden="true">|</span>
