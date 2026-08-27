@@ -497,6 +497,23 @@ html { scroll-behavior: smooth; }
   margin-bottom: 28px;
 }
 
+.kml-contact-email {
+  display: inline-block;
+  margin-bottom: 40px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--accent-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-main);
+  padding-bottom: 3px;
+  transition: color 0.3s ease;
+}
+
+.kml-contact-email:hover {
+  color: var(--accent-main);
+}
+
 .kml-contact-links {
   display: flex;
   flex-direction: column;
@@ -989,27 +1006,28 @@ textarea:focus-visible {
         <p class="kml-p" lang="uk">Напишіть зручним способом — відповідаю особисто.</p>
       </div>
       <div class="kml-contact-right fade-in">
+        <a class="kml-contact-email" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=natavaissiere@gmail.com" target="_blank" rel="noopener">natavaissiere@gmail.com</a>
         <div class="kml-contact-links">
-          <a class="kml-contact-link" href="https://www.instagram.com/nataliia.mykhailova_/" target="_blank" rel="noopener">
+          <a class="kml-contact-link" href="https://www.instagram.com/nataliia.mykhailova_/" target="_blank" rel="noopener" aria-label="Instagram: @nataliia.mykhailova_">
             <svg viewBox="0 0 24 24" width="45" height="45" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
               <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
               <circle cx="12" cy="12" r="4.2"></circle>
               <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle>
             </svg>
-            <span>Instagram</span>
+            <span>@nataliia.mykhailova_</span>
           </a>
-          <a class="kml-contact-link" href="https://t.me/natavaissier" target="_blank" rel="noopener">
+          <a class="kml-contact-link" href="https://t.me/natavaissier" target="_blank" rel="noopener" aria-label="Telegram: @natavaissier">
             <svg viewBox="0 0 24 24" width="45" height="45" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <line x1="22" y1="2" x2="11" y2="13"></line>
               <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
             </svg>
-            <span>Telegram</span>
+            <span>@natavaissier</span>
           </a>
-          <a class="kml-contact-link" href="https://wa.me/380973702228" target="_blank" rel="noopener">
+          <a class="kml-contact-link" href="https://wa.me/380973702228" target="_blank" rel="noopener" aria-label="WhatsApp: +380 97 370 22 28">
             <svg viewBox="0 0 24 24" width="45" height="45" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
             </svg>
-            <span>WhatsApp</span>
+            <span>+380&nbsp;97&nbsp;370&nbsp;22&nbsp;28</span>
           </a>
         </div>
       </div>
