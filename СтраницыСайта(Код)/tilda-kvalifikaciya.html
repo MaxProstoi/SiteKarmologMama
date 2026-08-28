@@ -794,10 +794,56 @@ html { scroll-behavior: smooth; }
   color: var(--text-muted-dark);
 }
 
+.kml-footer-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: var(--text-muted-dark);
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+/* Иначе flex-элементы не сжимаются ниже своей ширины и строка вылезает за экран */
+.kml-footer-meta > span,
+.kml-footer-meta > a {
+  min-width: 0;
+}
+
+.kml-footer-meta a {
+  color: var(--text-muted-dark);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.kml-footer-meta a:hover {
+  color: var(--accent-main);
+}
+
+.kml-footer-meta-sep {
+  color: var(--text-muted-dark);
+  opacity: 0.5;
+}
+
 @media (max-width: 768px) {
   .kml-footer-row {
     flex-direction: column;
     text-align: center;
+  }
+
+  /* align-self: stretch задаёт блоку определённую ширину — без неё flex-wrap
+     не срабатывает (родитель в колонку центрирует по контенту) и строка вылезает за экран */
+  .kml-footer-meta {
+    justify-content: center;
+    align-self: stretch;
+    text-align: center;
+  }
+
+  /* На мобайле строка переносится — точка-разделитель в начале строки выглядит мусором */
+  .kml-footer-meta-sep {
+    display: none;
   }
 }
 
@@ -1043,6 +1089,13 @@ textarea:focus-visible {
     <div class="kml-footer-row">
       <p style="margin:0;" lang="ru">© 2025–2026 Кармолог</p>
       <p style="margin:0;" lang="uk">© 2025–2026 Кармолог</p>
+      <div class="kml-footer-meta">
+        <span lang="ru">Оплата картой: Visa · Mastercard · <a href="https://www.wayforpay.com" target="_blank" rel="noopener">WayForPay</a></span>
+        <span lang="uk">Оплата карткою: Visa · Mastercard · <a href="https://www.wayforpay.com" target="_blank" rel="noopener">WayForPay</a></span>
+        <span class="kml-footer-meta-sep" aria-hidden="true">·</span>
+        <!-- Ведёт на страницу оферты. В Tilda у неё должен быть задан «Адрес страницы»: oferta -->
+        <a class="kml-footer-oferta-link" href="/oferta"><span lang="ru">Публичная оферта</span><span lang="uk">Публічна оферта</span></a>
+      </div>
     </div>
   </div>
 </section>
